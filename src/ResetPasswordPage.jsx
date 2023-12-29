@@ -29,7 +29,7 @@ errors.confirmPassword ="Please enter correct Password"
             },
             onSubmit: async (values) => {
                 try {
-                    const response = await axios.put(`http://localhost:3005/reset-password/${token}`,values);
+                    const response = await axios.put(`https://nodejs-password-reset-flow.onrender.com/reset-password/${token}`,values);
                    alert("password reseted successfully!!");
 
                 } catch(error) {

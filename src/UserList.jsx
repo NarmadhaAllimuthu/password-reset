@@ -11,7 +11,7 @@ function UserList() {
     useEffect(() => {
         async function getData() {
             try {
-                const response = await axios.get("http://localhost:3005/userlist",{
+                const response = await axios.get("https://nodejs-password-reset-flow.onrender.com/userlist",{
                     headers :{
                         "authorization" :localStorage.getItem("token")
                     }
@@ -36,10 +36,10 @@ function UserList() {
     // }
     const deleteData=async (id)=>{
     try {
-       const deletee= await axios.delete(`http://localhost:3005/${id}`);
+       const deletee= await axios.delete(`https://nodejs-password-reset-flow.onrender.com/${id}`);
         setState(deletee.data)
         
-        const response = await axios.get("http://localhost:3005/userlist",{
+        const response = await axios.get("https://nodejs-password-reset-flow.onrender.com/userlist",{
             headers :{
                 "authorization" :localStorage.getItem("token")
             }

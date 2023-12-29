@@ -11,7 +11,7 @@ function EditUser() {
     const [state,setState]=useState();
 
     let getdata =async ()=>{
-        const detail=await axios.get(`"http://localhost:3005/create-user"/${params.id}`,{
+        const detail=await axios.get(`"https://nodejs-password-reset-flow.onrender.com/create-user"/${params.id}`,{
             headers :{
                 "authorization" :localStorage.getItem("token")
             }

@@ -28,7 +28,7 @@ function CreateUser() {
             },
             onSubmit: async (values) => {
                 try {
-                     await axios.post("http://localhost:3005/create-user", values,{
+                     await axios.post("https://nodejs-password-reset-flow.onrender.com/create-user", values,{
                         headers :{
                             "authorization" :localStorage.getItem("token")
                         }

@@ -38,7 +38,7 @@ const navigate = useNavigate();
             //on submit it will proceess the data and create a object in api
 
             try {
-                const authorData = await axios.post("http://localhost:3005/login", values);
+                const authorData = await axios.post("https://nodejs-password-reset-flow.onrender.com/login", values);
                 localStorage.setItem("token",authorData.data.token);
                 alert("Logined successfully !");
                 navigate("/portal/dashboard");
